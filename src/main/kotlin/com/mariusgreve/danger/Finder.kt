@@ -1,4 +1,4 @@
-package com.tidal.danger
+package com.mariusgreve.danger
 
 import java.io.IOException
 import java.nio.file.FileSystems

@@ -20,7 +20,7 @@ dependencies {
 publishing {
     repositories {
         maven {
-            url = uri("https://maven.pkg.github.com/tidal-engineering/danger-kotlin-reporter-plugin/")
+            url = uri("https://maven.pkg.github.com/mariusgreve/danger-kotlin-reporter-plugin/")
             credentials {
                 username = githubUsername
                 password = githubPassword
@@ -29,9 +29,9 @@ publishing {
     }
     publications {
         create<MavenPublication>("default") {
-            groupId = "com.tidal.danger"
+            groupId = "com.mariusgreve.danger"
             artifactId = "danger-kotlin-reporter-plugin"
-            version = "0.0.3"
+            version = "0.0.1"
 
             from(components["java"])
         }

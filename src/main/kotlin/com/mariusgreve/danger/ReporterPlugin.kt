@@ -1,4 +1,4 @@
-package com.tidal.danger
+package com.mariusgreve.danger
 
 import systems.danger.kotlin.sdk.DangerPlugin
 import java.nio.file.Files

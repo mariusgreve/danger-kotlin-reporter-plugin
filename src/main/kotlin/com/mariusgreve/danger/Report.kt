@@ -1,4 +1,4 @@
-package com.tidal.danger
+package com.mariusgreve.danger
 
 data class Report(val files: List<IssueFile>)
 
