@@ -20,6 +20,11 @@ dependencies {
     testImplementation("junit:junit:4.12")
 }
 
+java {
+    withSourcesJar()
+    withJavadocJar()
+}
+
 signing {
     useGpgCmd()
     sign(publishing.publications)
