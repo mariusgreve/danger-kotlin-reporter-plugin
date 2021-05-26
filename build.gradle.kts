@@ -2,15 +2,13 @@ plugins {
     id("maven-publish")
     id("signing")
     kotlin("jvm") version "1.4.10"
+    id("io.github.gradle-nexus.publish-plugin") version "1.1.0"
 }
 
 val githubUsername: String by project
 val githubPassword: String by project
-val sonatypeUsername: String by project
-val sonatypePassword: String by project
 
 repositories {
-    jcenter()
     mavenCentral()
 }
 
@@ -19,6 +17,9 @@ dependencies {
     implementation("systems.danger:danger-kotlin-sdk:1.1")
     testImplementation("junit:junit:4.12")
 }
+
+group = "com.mariusgreve"
+version = "0.0.1"
 
 java {
     withSourcesJar()
@@ -30,20 +31,17 @@ signing {
     sign(publishing.publications)
 }
 
+nexusPublishing {
+    repositories {
+        sonatype {
+            nexusUrl.set(uri("https://s01.oss.sonatype.org/service/local/"))
+            snapshotRepositoryUrl.set(uri("https://s01.oss.sonatype.org/content/repositories/snapshots/"))
+        }
+    }
+}
+
 publishing {
     repositories {
-        maven {
-            name = "Sonatype"
-            val releasesRepoUrl =
-                uri("https://oss.sonatype.org/service/local/staging/deploy/maven2")
-            val snapshotsRepoUrl =
-                uri("https://oss.sonatype.org/content/repositories/snapshots")
-            url = if (version.toString().endsWith("SNAPSHOT")) snapshotsRepoUrl else releasesRepoUrl
-            credentials {
-                username = sonatypeUsername
-                password = sonatypePassword
-            }
-        }
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/mariusgreve/danger-kotlin-reporter-plugin/")
