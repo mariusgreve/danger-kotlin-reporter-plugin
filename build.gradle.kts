@@ -68,6 +68,12 @@ publishing {
                         email.set("marius.greve.hagen@gmail.com")
                     }
                 }
+                licenses {
+                    license {
+                        name.set("Apache License, Version 2.0")
+                        url.set("https://github.com/mariusgreve/danger-kotlin-reporter-plugin/blob/main/LICENSE")
+                    }
+                }
                 scm {
                     connection.set("scm:git:git://github.com/mariusgreve/danger-kotlin-reporter-plugin.git")
                     developerConnection.set("scm:git:ssh://github.com/mariusgreve/danger-kotlin-reporter-plugin.git")
