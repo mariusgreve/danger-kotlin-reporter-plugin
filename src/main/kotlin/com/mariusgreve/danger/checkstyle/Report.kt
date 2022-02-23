@@ -1,4 +1,4 @@
-package com.mariusgreve.danger
+package com.mariusgreve.danger.checkstyle
 
 data class Report(val files: List<IssueFile>)
 

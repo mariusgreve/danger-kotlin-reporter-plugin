@@ -13,10 +13,10 @@ Add the following dependency to your `Dangerfile.df.kts` file
 ```
 Register the plugin before the `danger` initialisation function and use like this:
 ```kotlin
-register plugin ReporterPlugin
+register plugin CheckstyleReporterPlugin
 
 danger(args) {
-    ReporterPlugin.report {
+    CheckstyleReporterPlugin.report {
         pattern = "**/build/reports/{ktlint,detekt}/**.xml"
     }
     

@@ -1,4 +1,4 @@
-package com.mariusgreve.danger
+package com.mariusgreve.danger.checkstyle
 
 import org.w3c.dom.Element
 import org.w3c.dom.Node
