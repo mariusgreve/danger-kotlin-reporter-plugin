@@ -9,7 +9,7 @@ Works with [ktlint] and [Detekt].
 
 Add the following dependency to your `Dangerfile.df.kts` file
 ```kotlin
-@file:DependsOn("com.mariusgreve:danger-kotlin-reporter-plugin:0.0.1")
+@file:DependsOn("com.mariusgreve:danger-kotlin-reporter-plugin:0.1.0")
 ```
 Register the plugin before the `danger` initialisation function and use like this:
 ```kotlin
