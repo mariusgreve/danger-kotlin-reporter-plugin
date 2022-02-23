@@ -14,7 +14,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
-    implementation("systems.danger:danger-kotlin-sdk:1.1")
+    implementation("systems.danger:danger-kotlin-sdk:1.2")
     testImplementation("junit:junit:4.12")
 }
 
