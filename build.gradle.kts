@@ -19,7 +19,7 @@ dependencies {
 }
 
 group = "com.mariusgreve"
-version = "0.0.1"
+version = "0.1.0"
 
 java {
     withSourcesJar()
@@ -56,7 +56,7 @@ publishing {
         create<MavenPublication>("default") {
             groupId = "com.mariusgreve"
             artifactId = "danger-kotlin-reporter-plugin"
-            version = "0.0.1"
+            version = "0.1.0"
 
             from(components["java"])
 
